@@ -17,7 +17,7 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 result = agent_executor.invoke({"input": "what is the weather in SF?",
                                 "system" : "你是一个助手",
-                                "chat_history" : ""
+                                "chat_history" : []
                                 })
 
 print(result)

@@ -15,6 +15,9 @@ llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 agent = create_openai_functions_agent(llm, tools, prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
-result = agent_executor.invoke({"input": "what is the weather in SF?"})
+result = agent_executor.invoke({"input": "what is the weather in SF?",
+                                "system" : "你是一个助手",
+                                "chat_history" : ""
+                                })
 
 print(result)

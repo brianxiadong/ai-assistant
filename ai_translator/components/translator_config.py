@@ -21,4 +21,12 @@ class TranslatorConfig:
             if attr is not None and value is not None:
                 data[attr] = value
 
-        print(data)
+        self._config_data = data
+
+        return data
+
+    def __getattr__(self, name):
+        # Try to get attribute from _config
+        if name in self._config_data:
+            return self._config_data[name]
+        raise AttributeError(f"'TranslationConfig' object has no attribute '{name}'")

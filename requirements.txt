@@ -7,3 +7,5 @@ langchain-openai
 tiktoken
 tavily-python
 langchainhub
+loguru
+pdfplumber

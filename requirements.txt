@@ -9,3 +9,4 @@ tavily-python
 langchainhub
 loguru
 pdfplumber
+gradio

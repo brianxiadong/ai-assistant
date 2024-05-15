@@ -9,8 +9,6 @@ class MDPrinter:
 
     def print(self):
         with open(self.output_file_path, 'w', encoding='utf-8') as output_file:
-            md_text = ""
             for page in self.book.pages:
                 for content in page.contents:
-                    text = content.translation
-                    output_file.write(text + '\n\n')
+                    output_file.write(content + '\n\n')
